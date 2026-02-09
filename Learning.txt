@@ -1,0 +1,222 @@
+🔹 BASIC GIT COMMANDS
+git --version
+
+👉 Checks Git is installed or not and shows version.
+
+ls
+
+👉 Shows files and folders in current directory.
+
+pwd
+
+👉 Shows current location (path) in your system.
+
+clear
+
+👉 Clears the terminal screen.
+
+🔹 CONFIGURE GIT (ONE TIME SETUP)
+git config --global user.name "My Name"
+
+👉 Sets your name for all Git commits.
+
+git config --global user.email "myemail@gmail.com"
+
+👉 Sets your email for all Git commits.
+
+git config --list
+
+👉 Shows all Git settings (name, email, etc).
+
+echo ~
+
+👉 Shows your home directory path.
+
+cd ~
+
+👉 Takes you to home directory.
+
+🔹 CLONING A REPOSITORY
+git clone <repo-link>
+
+👉 Copies a GitHub repository from GitHub to your system.
+
+Example:
+
+git clone https://github.com/user/repo.git
+
+🔹 CHECK FILE STATUS
+git status
+
+👉 Shows:
+
+which files are changed
+
+which are staged
+
+which are untracked
+
+ls -a
+
+👉 Shows all files including hidden ones (.git folder).
+(Used in Git Bash)
+
+ls -Force
+
+👉 Same as above but used in PowerShell.
+
+🔹 FILE STATES IN GIT (VERY IMPORTANT)
+State	Meaning
+Untracked	New file, Git is not tracking it
+Modified	File changed but not staged
+Staged	File ready to commit
+Unmodified	No changes
+🔹 ADDING FILES
+git add <file-name>
+
+👉 Adds one file to staging area.
+
+git add .
+
+👉 Adds all changed files to staging area.
+
+🔹 COMMIT
+git commit -m "message"
+
+👉 Saves changes with a message.
+
+Example:
+
+git commit -m "Added login page"
+
+🔹 PUSH COMMANDS
+git push origin main
+
+👉 Sends your commits from local to GitHub.
+
+🔹 INITIALIZE A NEW REPO
+git init
+
+👉 Converts a normal folder into a Git repository.
+
+git remote add origin <repo-link>
+
+👉 Connects your local repo to GitHub repo.
+
+git remote -v
+
+👉 Shows connected remote URLs.
+
+git branch
+
+👉 Shows current branch.
+
+git branch -m main
+
+👉 Renames current branch to main.
+
+git push -u origin main
+
+👉 Pushes code and sets upstream
+(-u means future git push works without extra info)
+
+🔹 DIRECTORY COMMANDS
+cd ..
+
+👉 Moves one folder back.
+
+mkdir <folder-name>
+
+👉 Creates a new folder.
+
+🔹 COMPLETE FLOW (VERY IMPORTANT)
+
+👉 GitHub repo → clone → change code → add → commit → push
+
+This is the daily Git cycle.
+
+🔹 BRANCHING
+git branch
+
+👉 Shows all branches.
+
+git branch -M main
+
+👉 Force rename branch to main.
+
+git checkout -b <new-branch>
+
+👉 Creates new branch and switches to it.
+
+git branch -d <branch-name>
+
+👉 Deletes a branch.
+
+🔹 MERGING CODE
+git diff <branch-name>
+
+👉 Shows difference between branches.
+
+git merge <branch-name>
+
+👉 Merges given branch into current branch.
+
+🔹 PULL REQUEST (PR)
+
+👉 PR means:
+
+You push code to branch
+
+Create PR on GitHub
+
+Team reviews
+
+Merge into main
+
+🔹 PULL COMMAND
+git pull origin main
+
+👉 Brings latest code from GitHub to local.
+
+🔹 RESOLVING MISTAKES / RESET
+Case 1: Go one commit back
+git reset HEAD~1
+
+
+👉 Removes last commit but keeps code.
+
+Case 2: Remove last commit completely
+git reset --hard HEAD~1
+
+
+👉 Removes commit and code (dangerous).
+
+Case 3: Reset to specific commit
+git reset <commit-hash>
+
+
+👉 Moves HEAD to that commit.
+
+Force reset (dangerous)
+git reset --hard <commit-hash>
+
+
+👉 Everything after that commit is deleted.
+
+🔥 SUPER SIMPLE SUMMARY
+
+clone → download repo
+
+status → check changes
+
+add → stage changes
+
+commit → save changes
+
+push → upload to GitHub
+
+pull → download latest code
+
+branch → work separately
+
+merge → combine code
