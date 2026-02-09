@@ -220,3 +220,20 @@ pull → download latest code
 branch → work separately
 
 merge → combine code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
